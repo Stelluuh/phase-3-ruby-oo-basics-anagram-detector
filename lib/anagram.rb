@@ -5,6 +5,7 @@ require 'pry'
 class Anagram
     
     attr_accessor :word
+
     def initialize (word)
         @word = word
     end
@@ -16,7 +17,7 @@ class Anagram
         #iterate through anagrams_array, separate words using .split, separete each letter using .sort. Then using == to see if the instance word variable matches word
         anagrams_array.filter do |word| 
            word.split("").sort == @word.split("").sort
-           binding.pry
+        #    binding.pry
         end
     end
 end
@@ -27,4 +28,4 @@ listen = Anagram.new("listen")
 listen.match(%w[enlists google inlets banana])
 # => ["inlets"]
 
-binding.pry
+# binding.pry
